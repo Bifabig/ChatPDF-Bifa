@@ -1,5 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { UserButton, auth } from '@clerk/nextjs';
+import { LogIn } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   const { userId } = auth();
@@ -20,7 +22,18 @@ export default function Home() {
             Join millions of students, researchers and professionals to
             instantly answer questions and understand research with AI.
           </p>
-          <div className="w-full mt-4"></div>
+          <div className="w-full mt-4">
+            {isAuth ? (
+              <h1>fileUpload</h1>
+            ) : (
+              <Link href="/sign-in">
+                <Button>
+                  Login to get started
+                  <LogIn className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -28,7 +28,7 @@ export default function Home() {
             ) : (
               <Link href="/sign-in">
                 <Button>
-                  Login to get started
+                  Login
                   <LogIn className="w-4 h-4 ml-2" />
                 </Button>
               </Link>

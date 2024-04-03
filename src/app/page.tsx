@@ -24,7 +24,7 @@ export default function Home() {
           </p>
           <div className="w-full mt-4">
             {isAuth ? (
-              <h1>Upload</h1>
+              <h1>File Upload</h1>
             ) : (
               <Link href="/sign-in">
                 <Button>
